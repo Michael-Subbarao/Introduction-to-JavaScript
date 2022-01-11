@@ -111,8 +111,41 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(weight, age){
+  if(age>=1){
+    if(weight>15)
+    {
+      return .02*weight;
+    }
+    else if(weight>10)
+    {
+      return weight*.03;
+    }
+    else if(weight>5)
+    {
+      return weight*.04;
+    }
+    else if(weight>0)
+    {
+      return weight*.05;
+    }
+  }
+  else
+  {
+    if(age>=.166&&age<=(4/12))
+    {
+      return weight*.1;
+    }
+    else if(age>.333&&age<.583)
+    {
+      return weight*.05;
+    }
+    else 
+    {
+      return weight*.04;
+    }
+
+  }
 }
 
 
@@ -139,9 +172,36 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+let computer = Math.random()*3+1;
 
 function game(user, computer){
-  /*add your code here*/
+  if(user === 'rock')
+  {
+    switch(computer)
+    {
+      case 'scissors': return 'you win!';
+      case 'rock': return `it's a tie`;
+      case 'paper': return 'you lose!';
+    }
+  }
+  if(user === 'scissors')
+  {
+    switch(computer)
+    {
+      case 'scissors': return "It's a tie";
+      case 'rock': return 'you lose!';
+      case 'paper': return `you win!`;
+    }
+  }
+  if(user === 'paper')
+  {
+    switch(computer)
+    {
+      case 'scissors': return 'you lose!';
+      case 'rock': return 'you win!';
+      case 'paper': return `it's a tie`;
+    }
+  }
 }
 
 
@@ -157,8 +217,8 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(kilometers){
+  return kilometers * 0.621371;
 }
 
 
@@ -171,8 +231,8 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm / 30.48;
 }
 
 
@@ -187,8 +247,8 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(num){
+      return `${num} bottles of soda on the wall, ${num} bottles of soda, take one down pass it around ${num-1} bottles of soda on the wall`
 }
 
 
@@ -207,8 +267,26 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(score){
+  if(score>=90&& score<=100)
+  {
+    return 'you got an A';
+  }
+  else if(score <90 &&score>=80)
+  {
+    return 'you got a B';
+  }
+  else if(score <80 &&score>=70)
+  {
+    return 'you got a C';
+  }
+  else if(score <70 && score>=60)
+  {
+    return 'you got a D';
+  }
+  else{
+    return 'you got an F';
+  }
 }
 
 
@@ -226,8 +304,15 @@ HINT - try looking up the .includes() method
 */
 
 
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
+function vowelCounter(string) {
+  let counter;
+  for(let i =0; i<string.length;i++)
+  {
+    if(string[i].toUppercase()==='B'||string[i].toUppercase()==='B'||string[i].toUppercase()==='C'||string[i].toUppercase()==='D'||string[i].toUppercase()==='E')
+    {
+      counter ++;
+    }
+  }
 }
 
 
