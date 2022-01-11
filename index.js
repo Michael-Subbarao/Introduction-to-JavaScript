@@ -19,8 +19,8 @@ Do the following:
 
    HINT: no function required
 */
-
-
+const votingAge = 18;
+console.log(votingAge>=18);
 
 /*
 Task 1b - Values
@@ -33,9 +33,10 @@ Do the following:
    HINT: no function required
 */
 
-
-
-
+let a = 5;
+let b = 7;
+a += b;
+console.log(b);
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -48,7 +49,8 @@ Do the following:
    HINT: look up the Number method
 */
 
-
+let year = Number('1999');
+console.log(year);
 
 
 /*
@@ -60,8 +62,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a,b){
+  return a*b;
 }
 
 
@@ -76,8 +78,8 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  return age*7;
 }
 
 
